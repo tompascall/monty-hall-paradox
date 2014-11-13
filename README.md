@@ -3,7 +3,7 @@
 ####Used packages
 - Grunt for task automaton
   - grunt-contrib-jshint for linting
-  - grunt-newer for running Grunt with newer files only
+  - grunt-newer for running Grunt tasks on newer files only
   - grunt-contrib-watch
   - grunt-mocha-cli (Mocha testing framework for Grunt)
 - Expect.js as an assertion framework
