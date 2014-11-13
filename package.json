@@ -1,0 +1,25 @@
+{
+  "name": "framework-node-minimal",
+  "version": "0.0.0",
+  "description": "minimal framework for node projects",
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "framework"
+  ],
+  "author": "tompascall@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cli": "^1.11.0",
+    "grunt-newer": "^0.8.0",
+    "load-grunt-tasks": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
