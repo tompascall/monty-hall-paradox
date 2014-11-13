@@ -6,7 +6,7 @@
     "test": "grunt"
   },
   "keywords": [
-    "framework"
+    "testing", "framework"
   ],
   "author": "tompascall@gmail.com",
   "license": "MIT",

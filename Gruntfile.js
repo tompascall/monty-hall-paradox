@@ -39,15 +39,6 @@ module.exports = function(grunt){
       config: [files.grunt]
     },
 
-    // mochacli: {
-    //   options: {
-    //     require: ['expect.js'],
-    //     files: [files.test],
-    //     reporter: 'spec',
-    //     bail: true
-    //   }
-    // }
-
     mochacli: {
       options: {
         files: [files.test],
