@@ -33,7 +33,6 @@
 
   "predef": [
     "require",
-    "-Promise",
     "describe",
     "describe.skip",
     "describe.only",

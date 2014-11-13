@@ -42,7 +42,6 @@ module.exports = function(grunt){
     mochacli: {
       options: {
         files: [files.test],
-        bail: true
       },
       all: {
           options: {
@@ -51,15 +50,19 @@ module.exports = function(grunt){
       },
       dev: {
           options: {
+            bail: true
           }
       }
-    }
+    },
+
+    clean: ['test/01_sample-test.js', 'src/01_sample-code.js'],
+
   });
 
 
   grunt.registerTask('default', ['test:dev']);
-  grunt.registerTask('test:dev', ['newer:jshint:config',
+  grunt.registerTask('test:dev', ['jshint:config',
     'newer:jshint:tests', 'newer:jshint:js', 'mochacli:dev']);
-  grunt.registerTask('test:all', ['newer:jshint:config',
+  grunt.registerTask('test:all', ['jshint:config',
     'newer:jshint:tests', 'newer:jshint:js', 'mochacli:all']);
 };
