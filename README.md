@@ -1,6 +1,8 @@
-This is a minimal framework for node projects.
+###Minimal framework for Node.js projects
 
-I uses
+This is a minimal framework for Node.js projects.
+
+####Used packages
 - Grunt for task automaton
 - JSHint for linting
 - Mocha as a testing framework
