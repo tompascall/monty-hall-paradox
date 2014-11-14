@@ -27,7 +27,7 @@ When developing, run:
 
 You can check the boilerplate by running `grunt` in the project folder. There is a sample test in the `test` directory, that tests a simple `sum()` function:
 
-```
+```js
 'use strict';
 
 var expect = require('expect.js');
@@ -42,7 +42,7 @@ describe('Sample test', function(){
 
 And there is a sample production code in `src` directory, that contains the tested function:
 
-```
+```js
 'use strict';
 
 var sum = function(){
