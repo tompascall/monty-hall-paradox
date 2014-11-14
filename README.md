@@ -1,6 +1,6 @@
-###Boilerplate for Global Day of Code Retreat
+###Boilerplate for Global Day of Codretreat
 
-This project represents a minimal boilerplate code to start a Code Retreat project using Node.js, Mocha, Expect.js with Grunt task automation.
+This project represents a minimal boilerplate code to start a Coderetreat project using Node.js, Mocha, Expect.js with Grunt task automation.
 
 ####Prerequisities
 
