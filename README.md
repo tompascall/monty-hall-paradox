@@ -57,7 +57,7 @@ module.exports = sum;
 
 ####Cleaning up the boilerplate
 
-You can clean up the boilerplate by running `grunt clean`.
+You can clean up the boilerplate by running `grunt clean`. It will delete the above sample codes.
 
 ####Used packages
 
