@@ -2,7 +2,6 @@
 
 'use strict';
 
-
 var sum = function(){
   var args = Array.prototype.slice.call(arguments);
   return args.reduce(function(previous, current){

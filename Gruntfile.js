@@ -60,7 +60,7 @@ module.exports = function(grunt){
   });
 
 
-  grunt.registerTask('default', ['test:dev', 'jshint:config']);
+  grunt.registerTask('default', ['jshint:config', 'test:dev']);
   grunt.registerTask('test:dev', ['newer:jshint:tests',
     'newer:jshint:js', 'mochacli:dev']);
   grunt.registerTask('test:all', ['newer:jshint:tests',
