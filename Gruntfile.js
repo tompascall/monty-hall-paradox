@@ -55,7 +55,7 @@ module.exports = function(grunt){
       }
     },
 
-    clean: ['test/01_sample-test.js', 'src/01_sample-module.js'],
+    clean: ['test/sample.module.spec.js', 'src/sample.module.js'],
 
   });
 

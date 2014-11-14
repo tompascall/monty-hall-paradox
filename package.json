@@ -1,18 +1,27 @@
 {
-  "name": "framework-node-minimal",
-  "version": "0.0.0",
-  "description": "minimal framework for node projects",
+  "name": "boilerplate-code-retreat",
+  "version": "0.0.1",
+  "description": "minimal testing framework for node.js projects, using Grunt, Mocka, Expect.js",
   "scripts": {
-    "test": "grunt"
+    "test": ["grunt"]
   },
   "keywords": [
     "testing",
-    "framework"
+    "framework",
+    "coderetreat",
+    "grunt",
+    "mocha",
+    "expect.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tompascall/boilerplate-code-retreat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tompascall/boilerplate-code-retreat/issues"
+  },
   "author": "tompascall@gmail.com",
   "license": "MIT",
-  "dependencies": {
-  },
   "devDependencies": {
     "mocha": "^2.0.1",
     "expect.js": "^0.3.1",

@@ -61,18 +61,18 @@ You can clean up the boilerplate by running `grunt clean`. It will delete the ab
 
 ####Used packages
 
-- Grunt for task automaton
-  - grunt-contrib-jshint for linting
-  - grunt-newer for running Grunt tasks on newer files only
-  - grunt-contrib-watch
-  - grunt-mocha-cli (Mocha testing framework for Grunt)
-  - grunt-contrib-clean (cleaning up the boilerplate)
+- Grunt.js for task automaton
+  - `grunt-contrib-jshint` for linting
+  - `grunt-newer` for running Grunt tasks on newer files only
+  - `grunt-contrib-watch`
+  - `grunt-mocha-cli` (Mocha testing framework for Grunt)
+  - `grunt-contrib-clean` (cleaning up the boilerplate)
 - Expect.js as an assertion framework
 
 ####EditorConfig
 
-EditorConfig is used to maintain consistent coding styles. There is an .editorconfig file in the project root directory, that defines the main styles.
+EditorConfig is used to maintain consistent coding styles. There is an `.editorconfig` file in the project root directory, that defines the main styles.
 
 You have [EditorConfig plugins](http://editorconfig.org/) for lots of editors.
 
-As opening a file, EditorConfig plugins look for a file named .editorconfig in the directory of the opened file and in every parent directory. A search for .editorconfig files will stop if the root filepath is reached or an .editorconfig file with root=true is found.
+As opening a file, EditorConfig plugins look for a file named `.editorconfig` in the directory of the opened file and in every parent directory. A search for `.editorconfig` files will stop if the root filepath is reached or an `.editorconfig` file with `root=true` is found.
