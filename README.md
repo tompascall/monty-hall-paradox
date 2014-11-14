@@ -1,14 +1,5 @@
 ###Boilerplate for Global Day of Coderetreat (for Node.js projects)
 
-####Used packages
-- Grunt for task automaton
-  - grunt-contrib-jshint for linting
-  - grunt-newer for running Grunt tasks on newer files only
-  - grunt-contrib-watch
-  - grunt-mocha-cli (Mocha testing framework for Grunt)
-  - grunt-contrib-clean (cleaning up the boilerplate)
-- Expect.js as an assertion framework
-
 ####Prerequisities
 
 - [Node.js](http://nodejs.org/)
@@ -26,11 +17,53 @@ We have the following tasks:
 
 When developing, run:
 
+- `grunt watch` results in running grunt tasks automatically when a file is changed in the watched directory.
+
 - `grunt test:dev` to lint your code and run your tests. The task stops if there's any failing test. The same happens if you run `grunt` without any arguments.
 
 - `grunt test:all` to lint your code and run the test suite with all the tests, no matter if there's a failing one.
 
-- `grunt watch` results in running grunt tasks automatically when a file is changed in the watched directory.
+####Sample project
+
+You can check the boilerplate by running `grunt` in the project folder. There is a sample test in the `test` directory, that tests a simple `sum()` function:
+
+`'use strict';
+
+var expect = require('expect.js');
+var sum = require('../src/01_sample-module.js');
+
+describe('Sample test', function(){
+  it('should add arguments', function(){
+    expect(sum(1, 2, 3, 4, 5)).to.equal(1 + 2 + 3 + 4 + 5);
+  });
+});`
+
+And there is a sample production code in `src` directory, that contains the tested function:
+
+`'use strict';
+
+var sum = function(){
+  var args = Array.prototype.slice.call(arguments);
+  return args.reduce(function(previous, current){
+    return previous + current;
+  });
+};
+
+module.exports = sum;`
+
+####Cleaning up the boilerplate
+
+You can clean up the boilerplate by running `grunt clean`.
+
+####Used packages
+
+- Grunt for task automaton
+  - grunt-contrib-jshint for linting
+  - grunt-newer for running Grunt tasks on newer files only
+  - grunt-contrib-watch
+  - grunt-mocha-cli (Mocha testing framework for Grunt)
+  - grunt-contrib-clean (cleaning up the boilerplate)
+- Expect.js as an assertion framework
 
 ####EditorConfig
 

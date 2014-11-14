@@ -55,14 +55,14 @@ module.exports = function(grunt){
       }
     },
 
-    clean: ['test/01_sample-test.js', 'src/01_sample-code.js'],
+    clean: ['test/01_sample-test.js', 'src/01_sample-module.js'],
 
   });
 
 
-  grunt.registerTask('default', ['test:dev']);
-  grunt.registerTask('test:dev', ['jshint:config',
-    'newer:jshint:tests', 'newer:jshint:js', 'mochacli:dev']);
-  grunt.registerTask('test:all', ['jshint:config',
-    'newer:jshint:tests', 'newer:jshint:js', 'mochacli:all']);
+  grunt.registerTask('default', ['test:dev', 'jshint:config']);
+  grunt.registerTask('test:dev', ['newer:jshint:tests',
+    'newer:jshint:js', 'mochacli:dev']);
+  grunt.registerTask('test:all', ['newer:jshint:tests',
+    'newer:jshint:js', 'mochacli:all']);
 };
