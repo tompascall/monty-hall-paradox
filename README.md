@@ -1,4 +1,4 @@
-###Boilerplate for Global Day of Coderetreat (for Node.js projects)
+###Displayer
 
 ####Prerequisities
 

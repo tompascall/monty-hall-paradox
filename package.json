@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-code-retreat",
+  "name": "displayer",
   "version": "0.0.1",
-  "description": "minimal testing framework for node.js projects, using Grunt, Mocka, Expect.js",
+  "description": "display an array of strings, then waits for a given time, and refresh the the display",
   "scripts": {
     "test": ["grunt"]
   },
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tompascall/boilerplate-code-retreat.git"
+    "url": "https://github.com/tompascall/displayer.git"
   },
   "bugs": {
-    "url": "https://github.com/tompascall/boilerplate-code-retreat/issues"
+    "url": "https://github.com/tompascall/displayer/issues"
   },
   "author": "tompascall@gmail.com",
   "license": "MIT",
