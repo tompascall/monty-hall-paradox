@@ -26,7 +26,7 @@ module.exports = function(grunt){
       },
       config: {
         files: [files.grunt],
-        tasks: ['newer:jshint:config']
+        tasks: ['jshint:config']
       }
     },
 
@@ -55,7 +55,12 @@ module.exports = function(grunt){
       }
     },
 
-    clean: ['test/sample.module.spec.js', 'src/sample.module.js'],
+    clean: {
+      options: {
+        'no-write': false
+      },
+      all: ['test/**/*', 'src/**/*']
+    }
 
   });
 
