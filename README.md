@@ -1,4 +1,6 @@
-###Displayer
+###Boilerplate for Global Day of Code Retreat
+
+This project represents a minimal boilerplate code to start a Code Retreat project using Node.js, Mocha, Expect.js with Grunt task automation.
 
 ####Prerequisities
 
@@ -57,7 +59,7 @@ module.exports = sum;
 
 ####Cleaning up the boilerplate
 
-You can clean up the boilerplate by running `grunt clean`. It will delete all files and subfolders in `src` and `test` folders.
+You can clean up the boilerplate by running `grunt clean`. It will delete all files and subfolders in `src` and `test` folders. There is a copy of the sample files in the `sample` folder.
 
 ####Used packages
 
