@@ -3,11 +3,21 @@
 'use strict';
 
 var expect = require('expect.js');
+var sinon = require('sinon');
 var sum = require('../src/sample.module.js');
 
-describe('Sample test', function(){
+describe('Sample unit test', function(){
   it('should add arguments', function(){
     expect(sum(1, 2, 3, 4, 5)).to.equal(1 + 2 + 3 + 4 + 5);
+  });
+});
+
+describe('Sample stub test', function(){
+  it('returns the return value from the original function', function () {
+      var callback = sinon.stub().returns(1 + 2 + 3 + 4 + 5);
+      var proxy = sum(callback);
+
+      expect(proxy()).to.equal(1 + 2 + 3 + 4 + 5);
   });
 });
 

@@ -1,6 +1,6 @@
 ###Boilerplate for Global Day of Codretreat
 
-This project represents a minimal boilerplate code to start a Coderetreat project using Node.js, Mocha, Expect.js with Grunt task automation.
+This project represents a minimal boilerplate code to start a Coderetreat project using Node.js, Mocha, Expect.js, Sinon.js with Grunt task automation.
 
 ####Prerequisities
 
@@ -30,14 +30,25 @@ When developing, run:
 You can check the boilerplate by running `grunt` in the project folder. There is a sample test in the `test` directory, that tests a simple `sum()` function:
 
 ```js
+// sample.module.spec.js
+
 'use strict';
 
 var expect = require('expect.js');
-var sum = require('../src/01_sample-module.js');
+var sum = require('../src/sample.module.js');
 
 describe('Sample test', function(){
   it('should add arguments', function(){
     expect(sum(1, 2, 3, 4, 5)).to.equal(1 + 2 + 3 + 4 + 5);
+  });
+});
+
+describe('Sample stub test', function(){
+  it('returns the return value from the original function', function () {
+      var callback = sinon.stub().returns(1 + 2 + 3 + 4 + 5);
+      var proxy = sum(callback);
+
+      expect(proxy()).to.equal(1 + 2 + 3 + 4 + 5);
   });
 });
 ```
@@ -45,6 +56,8 @@ describe('Sample test', function(){
 And there is a sample production code in `src` directory, that contains the tested function:
 
 ```js
+// sample.module.js
+
 'use strict';
 
 var sum = function(){
@@ -70,6 +83,7 @@ You can clean up the boilerplate by running `grunt clean`. It will delete all fi
   - `grunt-mocha-cli` (Mocha testing framework for Grunt)
   - `grunt-contrib-clean` (cleaning up the boilerplate)
 - Expect.js as an assertion framework
+- Sinon.js as a mocking tool
 
 ####EditorConfig
 
