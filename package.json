@@ -5,7 +5,8 @@
   "scripts": {
     "test": [
       "grunt"
-    ]
+    ],
+    "start": "node src/monty.js"
   },
   "keywords": [
     "testing",

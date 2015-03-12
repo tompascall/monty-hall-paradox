@@ -2,38 +2,55 @@
 
 'use strict';
 
+var Q = require('q');
+
+
 var readline = require('readline');
 
 var monty = {
   doors: [],
   setDoorNumbers: function (getAnswer) {
-    monty.doorNumbers = getAnswer('Please give me the number of doors: ');
-    if (typeof monty.doorNumbers !== 'number') {
-      monty.doorNumbers = Number(monty.doorNumbers);
-    }
+    var deferred = Q.defer();
+    getAnswer('Please give me the number of doors: ')
+    .then(function (answer) {
+      monty.doorNumbers = answer;
+      if (typeof monty.doorNumbers !== 'number') {
+        monty.doorNumbers = Number(monty.doorNumbers);
+      }
+      deferred.resolve();
+    });
+    return deferred.promise;
   },
 
   setRoundNumbers: function (getAnswer) {
-    monty.roundNumbers = getAnswer('Please give me the number of rounds: ');
-    if (typeof monty.roundNumbers !== 'number') {
-      monty.roundNumbers = Number(monty.roundNumbers);
-    }
+    var deferred = Q.defer();
+    getAnswer('Please give me the number of rounds: ')
+    .then(function (answer) {
+      monty.roundNumbers = answer;
+      if (typeof monty.roundNumbers !== 'number') {
+        monty.roundNumbers = Number(monty.roundNumbers);
+      }
+      deferred.resolve();
+    });
+    return deferred.promise;
   },
 
   setMethod: function (getAnswer) {
-    monty.method = getAnswer('Shall we stay or shall we change the door at the end? (stay: 0, change: 1) ');
-    if (Number(monty.method) === 0) {
-      monty.method = 'stay';
-    }
-    else monty.method = 'change';
+    var deferred = Q.defer();
+    getAnswer('Shall we stay or shall we change the door at the end? (stay: 0, change: 1) ')
+    .then(function (answer) {
+      monty.method = answer;
+      if (Number(monty.method) === 0) {
+        monty.method = 'stay';
+      }
+      else monty.method = 'change';
+      deferred.resolve();
+    });
+    return deferred.promise;
   },
 
-  initDoors: function () {
-    for (var i = 0; i < monty.doorNumbers; i++) {
-      monty.doors.push('goat');
-    }
+  setCarPosition: function () {
     monty.carPosition = getRandomIntNumber(0, monty.doorNumbers - 1);
-    monty.doors[monty.carPosition] = 'car';
   },
 
   chooseDoor: function () {
@@ -57,41 +74,48 @@ var monty = {
 
   showResult: function () {
     var wins = 0;
-    var loses = 0;
+    var defeats = 0;
     var result;
     for (var i = 1; i <= monty.roundNumbers; i++) {
+      monty.setCarPosition();
+      monty.chooseDoor();
       result = monty.getResult();
       if (result === 'win') {
         wins++;
       }
       else {
-        loses++;
+        defeats++;
       }
     }
-    console.log(wins / loses);
+    console.log('wins: ' + wins);
+    console.log('defeats: ' + defeats);
+    console.log('wins / defeats : ' + wins / defeats);
   }
 };
 
-monty.setDoorNumbers(getAnswer);
-// monty.setRoundNumbers(getAnswer);
-// monty.setMethod(getAnswer);
-// monty.initDoors();
-// monty.chooseDoor();
-// monty.showResult();
-
+monty.setDoorNumbers(getAnswer)
+.then(function () {
+  return monty.setRoundNumbers(getAnswer);
+})
+.then(function () {
+  return monty.setMethod(getAnswer);
+})
+.then(function () {
+  monty.showResult();
+});
 
 function getAnswer(question) {
-    var answer;
+    var deferred = Q.defer();
     var rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout
     });
 
-    rl.question(question, function(answ) {
-      answer = answ;
+    rl.question(question, function(answer) {
       rl.close();
+      deferred.resolve(answer);
     });
-    return answer;
+    return deferred.promise;
   }
 
 function getRandomIntNumber (min, max) {

@@ -1,8 +1,15 @@
-###Testing Monty Hall paradox
+###Testing Monty Hall problem
 
-This project represents a simple test for Monty Hall paradox.
+This project represents a simple test for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem).
 
-####Prerequisities
+####Run the application
+
+- You'll need to install [Node.js](http://nodejs.org/)
+- Clone the project, then run `npm install`
+- then run `npm start`
+- You have to give the number of doors, the number of rounds and the method of calculation (based on the decision we want to stay or change our position).
+
+####Prerequisities of development
 
 - [Node.js](http://nodejs.org/)
 - [Grunt](http://gruntjs.com/getting-started)
