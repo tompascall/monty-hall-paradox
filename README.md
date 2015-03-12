@@ -6,8 +6,8 @@ This project represents a simple test for [Monty Hall problem](http://en.wikiped
 
 - You'll need to install [Node.js](http://nodejs.org/)
 - Clone the project, then run `npm install`
-- then run `npm start`
-- You have to give the number of doors, the number of rounds and the method of calculation (based on the decision we want to stay or change our position).
+- Run `npm start`
+- You have to give the number of doors, the number of rounds and the method of calculation (based on the decision if we want to stay or change our position). The app will calculate the wins and the defeats so you can see that Marilyn vos Savant was really right.
 
 ####Prerequisities of development
 

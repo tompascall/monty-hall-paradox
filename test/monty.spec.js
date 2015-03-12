@@ -59,7 +59,6 @@ describe('Get user inputs', function () {
       answer = answ;
       rl.close();
       deferred.resolve(answer);
-      //done();
     });
 
     mockUserAnswer(rl, userAnswer);
