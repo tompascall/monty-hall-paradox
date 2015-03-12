@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-code-retreat",
+  "name": "monty-hall-paradox",
   "version": "0.0.1",
-  "description": "minimal boilerplate code to start a Coderetreat project using Node.js, Mocha, Expect.js with Grunt task automation",
+  "description": "TEsting Monty Hall paradox",
   "scripts": {
     "test": [
       "grunt"
@@ -10,17 +10,18 @@
   "keywords": [
     "testing",
     "framework",
-    "coderetreat",
+    "Monty Hall",
+    "paradox",
     "grunt",
     "mocha",
     "expect.js"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tompascall/boilerplate-code-retreat.git"
+    "url": "https://github.com/tompascall/monty-hall-paradox.git"
   },
   "bugs": {
-    "url": "https://github.com/tompascall/boilerplate-code-retreat/issues"
+    "url": "https://github.com/tompascall/monty-hall-paradox/issues"
   },
   "author": "tompascall@gmail.com",
   "license": "MIT",
