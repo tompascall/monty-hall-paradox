@@ -1,6 +1,6 @@
-###Boilerplate for Global Day of Coderetreat
+###Testing Monty Hall paradox
 
-This project represents a minimal boilerplate code to start a Coderetreat project using Node.js, Mocha, Expect.js, Sinon.js with Grunt task automation.
+This project represents a simple test for Monty Hall paradox.
 
 ####Prerequisities
 
@@ -24,55 +24,6 @@ When developing, run:
 - `grunt test:dev` to lint your code and run your tests. The task stops if there's any failing test. The same happens if you run `grunt` without any arguments.
 
 - `grunt test:all` to lint your code and run the test suite with all the tests, no matter if there's a failing one.
-
-####Sample project
-
-You can check the boilerplate by running `grunt` in the project folder. There is a sample test in the `test` directory, that tests a simple `sum()` function:
-
-```js
-// sample.module.spec.js
-
-'use strict';
-
-var expect = require('expect.js');
-var sum = require('../src/sample.module.js');
-
-describe('Sample test', function(){
-  it('should add arguments', function(){
-    expect(sum(1, 2, 3, 4, 5)).to.equal(1 + 2 + 3 + 4 + 5);
-  });
-});
-
-describe('Sample stub test', function(){
-  it('returns the return value from the original function', function () {
-      var callback = sinon.stub().returns(1 + 2 + 3 + 4 + 5);
-      var proxy = sum(callback);
-
-      expect(proxy()).to.equal(1 + 2 + 3 + 4 + 5);
-  });
-});
-```
-
-And there is a sample production code in `src` directory, that contains the tested function:
-
-```js
-// sample.module.js
-
-'use strict';
-
-var sum = function(){
-  var args = Array.prototype.slice.call(arguments);
-  return args.reduce(function(previous, current){
-    return previous + current;
-  });
-};
-
-module.exports = sum;
-```
-
-####Cleaning up the boilerplate
-
-You can clean up the boilerplate by running `grunt clean`. It will delete all files and subfolders in `src` and `test` folders. There is a copy of the sample files in the `sample` folder.
 
 ####Used packages
 
