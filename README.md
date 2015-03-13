@@ -13,7 +13,7 @@ The **number of doors** is quite straightforward. In the original situation ther
 
 The app calculates this 'rounds' times, and give you the proper result.
 
-You can see, that you have much less chance to make a hit in 100 doors, than in 2 doors.   
+You can see, that you have much less chance to make a hit in 100 doors, than in 2 doors. It means that you have more chance if you change your position at the end.   
 
 ####Run the application
 
