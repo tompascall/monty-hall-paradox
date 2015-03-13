@@ -1,6 +1,19 @@
 ###Testing Monty Hall problem
 
-This project represents a simple test for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem).
+This project represents a simple test for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem). It asks you to give 
+- the number of doors 
+- the number of rounds and
+- the calculation method.
+
+The **number of doors** is quite straightforward. In the original situation there was 3 doors, but but in the app you can choose 3 or more doors. The **number of rounds** means that the app calculates round-times the chances in order to have a more precise result. The **calculation method** means that you decide you will change the door at the end, or you will stay. Every round will be calculated with this method. So if you choose 100 doors, 1000 rounds and to change, then the app create a random number between 1 - 100 (this is the position of the car), an another random number between 1 - 100 (this is the choice of the player), and 
+- if these are equal and the method is 'stay', the result is win,
+- if these are equal and the method is 'change', the result is defeat,
+- if these are not equal and the method is stay, the result is defeat,
+- if these are not equal and the method is change, the result is win.
+
+The app calculates this 'rounds' times, and give you the proper result.
+
+You can see, that you have much less chance to make a hit in 100 doors, than in 2 doors.   
 
 ####Run the application
 
