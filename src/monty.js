@@ -68,11 +68,11 @@ var monty = {
   },
 
   setCarPosition: function () {
-    monty.carPosition = getRandomIntNumber(0, monty.doorNumbers - 1);
+    monty.carPosition = getRandomIntNumber(1, monty.doorNumbers);
   },
 
   chooseDoor: function () {
-    monty.chosenDoor = getRandomIntNumber(0, monty.doorNumbers - 1);
+    monty.chosenDoor = getRandomIntNumber(1, monty.doorNumbers);
   },
 
   getResult: function () {

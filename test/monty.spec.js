@@ -49,14 +49,12 @@ describe('Get user inputs', function () {
 
   function getAnswer(question) {
     var deferred = Q.defer();
-    var answer;
     var rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout
     });
 
-    rl.question(question, function(answ) {
-      answer = answ;
+    rl.question(question, function(answer) {
       rl.close();
       deferred.resolve(answer);
     });

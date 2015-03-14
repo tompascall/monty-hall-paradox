@@ -1,19 +1,23 @@
 ###Testing Monty Hall problem
 
-This project represents a simple test for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem). It asks you to give 
-- the number of doors 
+This project represents a simple test for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem):
+
+>Suppose you're on a game show, and you're given the choice of three doors: Behind one door is a car; behind the others, goats. You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
+
+The app asks you to give
+- the number of doors
 - the number of rounds and
 - the calculation method.
 
-The **number of doors** is quite straightforward. In the original situation there was 3 doors, but but in the app you can choose 3 or more doors. The **number of rounds** means that the app calculates round-times the chances in order to have a more precise result. The **calculation method** means that you decide you will change the door at the end, or you will stay. Every round will be calculated with this method. So if you choose 100 doors, 1000 rounds and to change, then the app create a random number between 1 - 100 (this is the position of the car), an another random number between 1 - 100 (this is the choice of the player), and 
+The **number of doors** is quite straightforward. In the original situation there was 3 doors, but but in the app you can choose 3 or more doors. The **number of rounds** means that the app calculates 'rounds' times the chances in order to have a more precise result. The **calculation method** means that you decide you will change the door at the end, or you will stay. Every round will be calculated with this method. So if you choose 100 doors, 1000 rounds and to change at the end, the app creates a random number between 1 - 100 (this is the position of the car), an another random number between 1 - 100 (this is the choice of the player), and
 - if these are equal and the method is 'stay', the result is win,
 - if these are equal and the method is 'change', the result is defeat,
 - if these are not equal and the method is stay, the result is defeat,
 - if these are not equal and the method is change, the result is win.
 
-The app calculates this 'rounds' times, and give you the proper result.
+The app calculates this 'rounds' times, and gives you the proper result.
 
-You can see, that you have much less chance to make a hit in 100 doors, than in 2 doors. It means that you have more chance if you change your position at the end.   
+To sum it up, if you change your position at the end, you stake on that at the beginnig you didn't hit the right door in the 100 doors.
 
 ####Run the application
 
