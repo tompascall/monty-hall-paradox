@@ -61,7 +61,7 @@ var monty = {
       if (monty.method === 0) {
         monty.method = 'stay';
       }
-      else monty.method = 'change';
+      else monty.method = 'switch';
       deferred.resolve();
     });
     return deferred.promise;
@@ -79,10 +79,10 @@ var monty = {
     if ((monty.carPosition === monty.chosenDoor) && monty.method === 'stay') {
       return 'win';
     }
-    if ((monty.carPosition === monty.chosenDoor) && monty.method === 'change') {
+    if ((monty.carPosition === monty.chosenDoor) && monty.method === 'switch') {
       return 'lose';
     }
-    if ((monty.carPosition !== monty.chosenDoor) && monty.method === 'change') {
+    if ((monty.carPosition !== monty.chosenDoor) && monty.method === 'switch') {
       return 'win';
     }
     if ((monty.carPosition !== monty.chosenDoor) && monty.method === 'stay') {

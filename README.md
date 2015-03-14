@@ -9,15 +9,15 @@ The app asks you to give
 - the number of rounds and
 - the calculation method.
 
-The **number of doors** is quite straightforward. In the original situation there was 3 doors, but but in the app you can choose 3 or more doors. The **number of rounds** means that the app calculates 'rounds' times the chances in order to have a more precise result. The **calculation method** means that you decide you will change the door at the end, or you will stay. Every round will be calculated with this method. So if you choose 100 doors, 1000 rounds and to change at the end, the app creates a random number between 1 - 100 (this is the position of the car), an another random number between 1 - 100 (this is the choice of the player), and
+The **number of doors** is quite straightforward. In the original situation there was 3 doors, but but in the app you can choose 3 or more doors. The **number of rounds** means that the app calculates 'rounds' times the chances in order to have a more precise result. The **calculation method** means that you decide you will switch your choice at the end, or you will stay. Every round will be calculated with this method. So if you choose 100 doors, 1000 rounds and to switch at the end, the app creates a random number between 1 - 100 (this is the position of the car), an another random number between 1 - 100 (this is the choice of the player), and
 - if these are equal and the method is 'stay', the result is win,
-- if these are equal and the method is 'change', the result is defeat,
-- if these are not equal and the method is stay, the result is defeat,
-- if these are not equal and the method is change, the result is win.
+- if these are equal and the method is 'switch', the result is defeat,
+- if these are not equal and the method is 'stay', the result is defeat,
+- if these are not equal and the method is 'switch', the result is win.
 
 The app calculates this 'rounds' times, and gives you the proper result.
 
-To sum it up, if you change your position at the end, you stake on that at the beginnig you didn't hit the right door in the 100 doors.
+To sum it up, if you change your position at the end, you stake on that at the beginnig you didn't pick the right door in the 100 doors.
 
 ####Run the application
 

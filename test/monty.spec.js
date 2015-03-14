@@ -35,11 +35,11 @@ describe('Get user inputs', function () {
     });
   });
 
-  it('should set the calculation method to "change"', function () {
+  it('should set the calculation method to "switch"', function () {
     userAnswer = '1\n';
     monty.setMethod(getAnswer)
     .then(function () {
-      expect(monty.method).to.equal('change');
+      expect(monty.method).to.equal('switch');
     });
   });
 
