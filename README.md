@@ -1,4 +1,4 @@
-###Simulating Monty Hall problem
+###Simulating the Monty Hall problem
 
 This project represents a simulation for [Monty Hall problem](http://en.wikipedia.org/wiki/Monty_Hall_problem):
 
